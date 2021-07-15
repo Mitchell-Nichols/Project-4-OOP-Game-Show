@@ -9,8 +9,14 @@ document.getElementById("btn__reset").addEventListener("click", () => {
     game.startGame();
 });
 
+const keys = document.getElementsByClassName("key");
 document.addEventListener("keydown", e => {
-    game.handleInteraction(e.key);
+    for(let i = 0; i < keys.length; i++){
+        if(keys[i].innerHTML === e.key){
+            game.handleInteraction(keys[i]);
+        }
+    };
+    
 });
 
 document.querySelectorAll(".key").forEach((key) => {
