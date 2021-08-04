@@ -108,7 +108,6 @@ class Game{
     * @param (HTMLButtonElement) button - The clicked button element
     */
     handleInteraction(button) {
-        console.log(button);
         if (!button.hasAttribute("disabled")){
             button.setAttribute("disabled","true");
   
