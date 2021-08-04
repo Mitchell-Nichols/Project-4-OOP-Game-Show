@@ -108,9 +108,9 @@ class Game{
     * @param (HTMLButtonElement) button - The clicked button element
     */
     handleInteraction(button) {
-        
-        if (button.disable !== true){
-            button.disable = true;
+        console.log(button);
+        if (!button.hasAttribute("disabled")){
+            button.setAttribute("disabled","true");
   
             if (this.activePhrase.checkLetter(button.textContent)) {
                 button.classList.add("chosen");
